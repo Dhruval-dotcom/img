@@ -1,0 +1,49 @@
+body, html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+.img-gallery-container {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    -webkit-box-shadow: 10px 10px 78px -16px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 78px -16px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 78px -16px rgba(0, 0, 0, 0.75);
+    -webkit-perspective: 2000px;
+    perspective: 2000px;
+}
+.img-container {
+    width: 400px;
+    height: 300px;
+    display: flex;
+    flex-flow: row wrap;
+    background: #f1f1f1;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    transition: all 1s ease-in;
+}
+.img {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    backface-visibility: hidden;
+    transition: all 0.5s ease-in;
+}
+.gallery-btn {
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+    background: #454545;
+    border: none;
+    border-radius: 100%;
+    color: #fff;
+    cursor: pointer;
+    transform: translate(150px);
+    transition: all 0.5s ease-out;
+}
+.gallery-btn:hover {
+    background: #118ab0;
+}
